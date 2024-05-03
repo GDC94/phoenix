@@ -9,7 +9,9 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "format": "npm run lint --fix && prettier --write .",
-    "prepare": "husky install"
+    "test:watch": "vitest --watch",
+    "prepare": "husky install",
+    "generate": "plop"
   },
   "dependencies": {
     "react": "^18.2.0",
