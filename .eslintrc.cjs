@@ -22,26 +22,6 @@ module.exports = {
     "@typescript-eslint/no-floating-promises": "off",
     "@typescript-eslint/no-confusing-void-expression": "off",
     "@typescript-eslint/no-explicit-any": "error",
-    "@typescript-eslint/no-unused-vars": "error",
-    "padding-line-between-statements": [
-      "warn",
-      {blankLine: "always", prev: "*", next: ["return", "export"]},
-      {blankLine: "always", prev: ["const", "let", "var"], next: "*"},
-      {blankLine: "any", prev: ["const", "let", "var"], next: ["const", "let", "var"]}
-    ],
-    "import/order": [
-      "warn",
-      {
-        groups: ["type", "builtin", "object", "external", "internal", "parent", "sibling", "index"],
-        pathGroups: [
-          {
-            pattern: "~/**",
-            group: "external",
-            position: "after"
-          }
-        ],
-        "newlines-between": "always"
-      }
-    ]
+    "@typescript-eslint/no-unused-vars": "error"
   }
 };

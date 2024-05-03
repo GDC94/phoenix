@@ -1,7 +1,8 @@
 // plop se define como un micro-generator framework
 const ComponentType = {
   ATOMS: "atoms",
-  MOLECULES: "molecules"
+  MOLECULES: "molecules",
+  ORGANISMS: "organisms"
 };
 
 const ComponentFolder = {
@@ -19,11 +20,10 @@ export default (plop) => {
     description: "Create new UI component",
     prompts: [
       {
-        // le preguntamos al usuario el nombre
         type: "input",
         name: "name",
         message: "Enter the component name"
-      }, // le preguntamos al usuario que tipo de componente es
+      }, 
       {
         type: "list",
         choices: Object.values(ComponentType),
@@ -42,7 +42,6 @@ export default (plop) => {
   });
   plop.setHelper("ComponentFolder", (componentType) => ComponentFolder[componentType]);
 
-  // prettier-ignore
   plop.setHelper(
         'storyPath',
         componentType => StoryPath[componentType]

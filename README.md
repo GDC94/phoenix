@@ -29,3 +29,8 @@ export default {
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
 - echo "npx --no -- commitlint --edit \$1" > .husky/commit-msg
+-@testing-library/user-event
+-@testing-library/jest-dom
+-jsdom
+-vitest
+-@testing-library/react

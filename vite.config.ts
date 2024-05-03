@@ -13,10 +13,17 @@ export default defineConfig({
     globals: true,
     environment: "jsdom",
     css: true,
-    setupFiles: "./tests/setup.ts",
+    setupFiles: "./src/test/setup.ts",
     coverage: {
       include: ["src/ui/**/*.{ts,tsx}"],
-      exclude: [...configDefaults.exclude, "src/ui/**/**/*.stories.{ts,tsx}"],
+      exclude: [
+        ...configDefaults.exclude,
+        "src/ui/**/**/*.stories.{ts,tsx}",
+        ".eslintrc.cjs",
+        "vite.config.ts",
+        "commitlint.config.cjs",
+        "src/vite-env.d.ts"
+      ],
       thresholds: {
         lines: 30,
         functions: 30,
