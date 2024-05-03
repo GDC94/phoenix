@@ -1,1 +1,6 @@
 plop-templates
+/build
+/public/build
+.env
+package-lock.json
+plopfile.js

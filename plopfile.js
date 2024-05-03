@@ -28,13 +28,11 @@ export default (plop) => {
         type: "list",
         choices: Object.values(ComponentType),
         name: "ComponentType",
-        message: "Enter the type of the component"
+        message: "⚡️ Enter the type of the component ⚡️"
       }
     ],
     actions: [
       {
-        // addMany me deja hacer muchas acciones de una
-        // https://plopjs.com/documentation/#addmany
         type: "addMany",
         destination: "src/ui/{{ComponentFolder ComponentType}}/{{name}}",
         base: "plop-templates/component",
