@@ -34,3 +34,7 @@ export default {
   -jsdom
   -vitest
   -@testing-library/react
+
+MSW
+-npm i -D msw
+-npx msw init .\public\ --> yes

@@ -1,0 +1,60 @@
+[
+  [
+    {
+      "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      "name": "theter"
+    },
+    {
+      "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "name": "usdc"
+    },
+    {
+      "address": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+      "name": "uniswap"
+    },
+    {
+      "address": "0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0",
+      "name": "polygon"
+    },
+    {
+      "address": "0xBB0E17EF65F82Ab018d8EDd776e8DD940327B28b",
+      "name": "axie infinity"
+    },
+    {
+      "address": "0xCC8Fa225D80b9c7D42F96e9570156c65D6cAAa25",
+      "name": "smooth love potion"
+    },
+    {
+      "address": "0x4Fabb145d64652a948d72533023f6E7A623C7C53",
+      "name": "binance usd"
+    },
+    {
+      "address": "0x514910771AF9Ca656af840dff83E8264EcF986CA",
+      "name": "chainlink"
+    },
+    {
+      "address": "0xA0b73E1Ff0B80914AB6fe0444E65848C4C34450b",
+      "name": "crypto com coin"
+    },
+    {
+      "address": "0x2AF5D2aD76741191D15Dfe7bF6aC92d4Bd912Ca3",
+      "name": "leo token"
+    },
+    {
+      "address": "0x45804880De22913dAFE09f4980848ECE6EcbAf78",
+      "name": "pax gold"
+    },
+    {
+      "address": "0xc00e94Cb662C3520282E6f5717214004A7f26888",
+      "name": "compound"
+    },
+    {
+      "address": "0x2b591e99afE9f32eAA6214f7B7629768c40Eeb39",
+      "name": "hex"
+    },
+    {
+      "address": "0xFca59Cd816aB1eaD66534D82bc21E7515cE441CF",
+      "name": "rarible"
+    }
+  ]
+]

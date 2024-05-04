@@ -1,0 +1,98 @@
+[
+  {
+    "header": 1,
+    "chain": {
+      "chainId": "0x1",
+      "name": "Ethereum",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Ethereum-icon-purple.svg/480px-Ethereum-icon-purple.svg.png",
+      "blockExplorer": "https://etherscan.io/",
+      "testnet": false,
+      "supportsEIP1559": true
+    },
+    "currency": {
+      "symbol": "ETH",
+      "decimals": 18,
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Ethereum-icon-purple.svg/480px-Ethereum-icon-purple.svg.png"
+    }
+  },
+  {
+    "header": 5,
+    "chain": {
+      "chainId": "0x5",
+      "name": "Ethereum Goerli",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Ethereum-icon-purple.svg/480px-Ethereum-icon-purple.svg.png",
+      "blockExplorer": "https://goerli.etherscan.io/",
+      "testnet": true,
+      "supportsEIP1559": true
+    },
+    "currency": {
+      "symbol": "ETH",
+      "decimals": 18,
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Ethereum-icon-purple.svg/480px-Ethereum-icon-purple.svg.png"
+    }
+  },
+  {
+    "header": 56,
+    "chain": {
+      "chainId": "0x38",
+      "name": "BNB Smart Chain",
+      "icon": "https://seeklogo.com/images/B/binance-coin-bnb-logo-97F9D55608-seeklogo.com.png",
+      "blockExplorer": "https://bscscan.com/",
+      "testnet": false,
+      "supportsEIP1559": false
+    },
+    "currency": {
+      "symbol": "BNB",
+      "decimals": 18,
+      "icon": "https://seeklogo.com/images/B/binance-coin-bnb-logo-97F9D55608-seeklogo.com.png"
+    }
+  },
+  {
+    "header": 97,
+    "chain": {
+      "chainId": "0x61",
+      "name": "BNB Smart Chain Testnet",
+      "icon": "https://seeklogo.com/images/B/binance-coin-bnb-logo-97F9D55608-seeklogo.com.png",
+      "blockExplorer": "https://testnet.bscscan.com/",
+      "testnet": true,
+      "supportsEIP1559": false
+    },
+    "currency": {
+      "symbol": "BNB",
+      "decimals": 18,
+      "icon": "https://seeklogo.com/images/B/binance-coin-bnb-logo-97F9D55608-seeklogo.com.png"
+    }
+  },
+  {
+    "header": 137,
+    "chain": {
+      "chainId": "0x89",
+      "name": "Polygon",
+      "icon": "https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png",
+      "blockExplorer": "https://polygonscan.com/",
+      "testnet": false,
+      "supportsEIP1559": true
+    },
+    "currency": {
+      "symbol": "MATIC",
+      "decimals": 18,
+      "icon": "https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png"
+    }
+  },
+  {
+    "header": 80001,
+    "chain": {
+      "chainId": "0x13881",
+      "name": "Polygon Mumbai",
+      "icon": "https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png",
+      "blockExplorer": "https://mumbai.polygonscan.com/",
+      "testnet": true,
+      "supportsEIP1559": true
+    },
+    "currency": {
+      "symbol": "MATIC",
+      "decimals": 18,
+      "icon": "https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png"
+    }
+  }
+]
