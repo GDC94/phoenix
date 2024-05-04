@@ -1,6 +1,6 @@
 import {http, HttpResponse} from "msw";
 
-export const handlers = [
+const handlers = [
   http.get("https://dummyjson.com/todos", () => {
     return HttpResponse.json(
       {
@@ -17,3 +17,5 @@ export const handlers = [
     );
   })
 ];
+
+export default handlers;

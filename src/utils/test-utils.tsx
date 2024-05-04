@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import {cleanup, render} from "@testing-library/react";
 import {afterEach, vi} from "vitest";
 
@@ -14,5 +15,7 @@ function customRender(ui: React.ReactElement, options = {}) {
 }
 
 export * from "@testing-library/react";
+
 export {default as userEvent} from "@testing-library/user-event";
+
 export {customRender};

@@ -7,7 +7,14 @@ import {configDefaults} from "vitest/config";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), dts({outDir: "dist", include: ["src/index.ts"], exclude: ["src/**/__tests__/**"]})],
+  plugins: [
+    react(),
+    dts({
+      outDir: "dist",
+      include: ["src/index.ts"],
+      exclude: ["src/**/__tests__/**"]
+    })
+  ],
 
   test: {
     globals: true,
@@ -19,7 +26,7 @@ export default defineConfig({
       exclude: [
         ...configDefaults.exclude,
         "src/ui/**/**/*.stories.{ts,tsx}",
-        ".eslintrc.cjs",
+        ".eslintrc.json",
         "vite.config.ts",
         "commitlint.config.cjs",
         "src/vite-env.d.ts"

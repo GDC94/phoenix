@@ -12,4 +12,4 @@ print_success_lines
 print_success 
 print_success_lines
 
-## npx lint-staged
+npx lint-staged

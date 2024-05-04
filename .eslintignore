@@ -4,5 +4,3 @@ coverage/
 .next/
 .vscode/
 build/
-vite.config.ts
-App.test.tsx
