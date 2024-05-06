@@ -1,7 +1,7 @@
 import {http, HttpResponse} from "msw";
 
 const handlers = [
-  http.get("https://dummyjson.com/todos", () => {
+  http.get("/api/todos", () => {
     return HttpResponse.json(
       {
         todos: [

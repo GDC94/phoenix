@@ -4,9 +4,13 @@ import react from "@vitejs/plugin-react-swc";
 import {resolve} from "path";
 import dts from "vite-plugin-dts";
 import {configDefaults} from "vitest/config";
+import {env} from "process";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  define: {
+    "process.env.NODE_ENV": JSON.stringify(env.NODE_ENV)
+  },
   plugins: [
     react(),
     dts({
@@ -37,6 +41,9 @@ export default defineConfig({
         branches: 30,
         statements: 30
       }
+    },
+    env: {
+      NODE_ENV: "development"
     }
   },
   build: {
