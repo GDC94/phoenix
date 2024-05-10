@@ -1,3 +1,5 @@
 export * from "./handlers";
 
-export {default as Server} from "./server";
+export {default as worker} from "./browser";
+
+export {default as server} from "./node";

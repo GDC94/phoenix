@@ -1,31 +1,39 @@
-import {describe, expect, it} from "vitest";
 import {HttpResponse, http} from "msw";
+import {describe, expect} from "vitest";
 
 import App from "./App";
 import {customRender, screen, userEvent} from "./utils/test-utils";
-import {Server} from "./test/mocks";
+import Server from "./test/mocks/node";
 
 describe("Tests on <App/> component", () => {
-  it("checking whether vite and react text is available", () => {
+  test("checking whether vite and react text is available", () => {
     customRender(<App />);
-    const text = screen.getByText("Vite + React");
+    const text = screen.getByText(
+      "Phoenix: System design and development"
+    );
 
     expect(text).toBeDefined();
   });
-  it("Should increment count on click", async () => {
+  test("Should increment count on click", async () => {
     customRender(<App />);
     userEvent.click(screen.getByRole("button"));
     const countShouldBeOne = await screen.findByText(/count is 1/i);
 
     expect(countShouldBeOne).toBeInTheDocument();
   });
-  it("Should be null if status is 401", () => {
+  test("Should be null if status is 401", () => {
     customRender(<App />);
     Server.use(
-      http.get("https://dummyjson.com/todos", () => {
+      http.get("/api/networks", () => {
         return new HttpResponse(null, {status: 401});
       })
     );
     expect(screen.queryByText("Todo List")).not.toBeInTheDocument();
+  });
+  test("Should be rendered the word Ethereum ", async () => {
+    customRender(<App />);
+    const ETH = await screen.findAllByText(/ethereum/i);
+
+    expect(ETH).toBeDefined();
   });
 });
