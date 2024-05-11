@@ -1,4 +1,4 @@
-export const WEIGHTS: Record<string, number> = {
+export const WEIGHTS = {
   normal: 500,
   medium: 600,
   bold: 800

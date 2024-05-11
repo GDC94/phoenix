@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 
 import "./App.css";
+import {Button} from "./ui/atoms/Button";
 
 export interface NetworksResponse {
   header: number;
@@ -46,6 +47,11 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
       </div>
       <div>{networks[0]?.chain.name}</div>
+      <div>
+        <Button size={"small"} color={"primary"}>
+          <p>Enviar</p>
+        </Button>
+      </div>
     </>
   );
 }

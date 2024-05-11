@@ -1,4 +1,4 @@
-const BRAEKPOINTS: Record<string, number> = {
+const BRAEKPOINTS = {
   phone: 600,
   tablet: 900,
   laptop: 1200,

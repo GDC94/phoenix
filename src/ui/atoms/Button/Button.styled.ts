@@ -1,11 +1,16 @@
 import styled from "@emotion/styled";
 
+import {VariantProps} from "./Button.types";
+
 interface LabelProps {
   textColor?: React.CSSProperties["color"];
 }
+interface ButtonProps {
+  variant?: VariantProps;
+}
 
-export const ButtonContainer = styled.button`
-  background-color: ${({theme}) => theme.colors.primary};
+export const ButtonContainer = styled.button<ButtonProps>`
+  background-color: ${({theme, variant}) => (variant ? variant : theme.colors)};
   border: 0;
   border-radius: ${({theme}) => theme.size[0.5]};
   cursor: pointer;

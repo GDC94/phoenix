@@ -6,6 +6,7 @@ import App from "./App.tsx";
 import "./index.css";
 import {getPublicKeys} from "./env.ts";
 import {theme} from "./styles/theme.ts";
+import GlobalStyles from "./styles/globalStyles.ts";
 
 async function enableMocking() {
   if (getPublicKeys().publicKeys.NODE_ENV !== "development") {
@@ -20,6 +21,7 @@ async function enableMocking() {
 enableMocking().then(() => {
   ReactDOM.createRoot(document.getElementById("root")!).render(
     <React.StrictMode>
+      <GlobalStyles />
       <ThemeProvider theme={theme}>
         <App />
       </ThemeProvider>

@@ -1,4 +1,4 @@
-export const SIZES: Record<string, string> = {
+export const SIZES = {
   "0.25": "0.25rem",
   "0.5": "0.5rem",
   "0.875": "0.875rem",

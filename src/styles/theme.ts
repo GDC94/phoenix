@@ -8,7 +8,7 @@ import {
   TypeThemeQueries,
   TypeThemeSizes,
   TypeThemeWeights
-} from "./themeComponents";
+} from "./components";
 
 export const theme = {
   colors: COLORS,

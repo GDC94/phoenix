@@ -4,9 +4,9 @@ import * as React from "react";
 
 import * as Styled from "./Button.styled";
 
-export const Button: React.FC<ButtonProps> = ({textColor, label, ...rest}) => {
+export const Button: React.FC<ButtonProps> = ({textColor, label, variant = "primary", ...rest}) => {
   return (
-    <Styled.ButtonContainer {...rest}>
+    <Styled.ButtonContainer variant={variant} {...rest}>
       <Styled.Label textColor={textColor}>{label}</Styled.Label>
     </Styled.ButtonContainer>
   );
