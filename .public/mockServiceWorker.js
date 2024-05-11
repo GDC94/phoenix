@@ -99,10 +99,7 @@ self.addEventListener("fetch", function (event) {
 
   // Opening the DevTools triggers the "only-if-cached" request
   // that cannot be handled by the worker. Bypass such requests.
-  if (
-    request.cache === "only-if-cached" &&
-    request.mode !== "same-origin"
-  ) {
+  if (request.cache === "only-if-cached" && request.mode !== "same-origin") {
     return;
   }
 
@@ -140,9 +137,7 @@ async function handleRequest(event, requestId) {
             status: responseClone.status,
             statusText: responseClone.statusText,
             body: responseClone.body,
-            headers: Object.fromEntries(
-              responseClone.headers.entries()
-            )
+            headers: Object.fromEntries(responseClone.headers.entries())
           }
         },
         [responseClone.body]
@@ -188,9 +183,7 @@ async function getResponse(event, client, requestId) {
   const requestClone = request.clone();
 
   function passthrough() {
-    const headers = Object.fromEntries(
-      requestClone.headers.entries()
-    );
+    const headers = Object.fromEntries(requestClone.headers.entries());
 
     // Remove internal MSW request header so the passthrough request
     // complies with any potential CORS preflight checks on the server.
@@ -264,10 +257,7 @@ function sendToClient(client, message, transferrables = []) {
       resolve(event.data);
     };
 
-    client.postMessage(
-      message,
-      [channel.port2].concat(transferrables.filter(Boolean))
-    );
+    client.postMessage(message, [channel.port2].concat(transferrables.filter(Boolean)));
   });
 }
 

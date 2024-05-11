@@ -28,7 +28,7 @@ function App() {
   const [networks, setNetworks] = useState<NetworksResponse[]>([]);
 
   useEffect(() => {
-    fetch("/api/networks")
+    fetch("/api/v1/networks")
       .then((res) => res.json())
       .then((data) => {
         setNetworks(data);
@@ -43,9 +43,7 @@ function App() {
       </div>
       <h1>Phoenix: System design and development</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
       </div>
       <div>{networks[0]?.chain.name}</div>
     </>

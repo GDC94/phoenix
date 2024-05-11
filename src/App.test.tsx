@@ -8,9 +8,7 @@ import Server from "./test/mocks/node";
 describe("Tests on <App/> component", () => {
   test("checking whether vite and react text is available", () => {
     customRender(<App />);
-    const text = screen.getByText(
-      "Phoenix: System design and development"
-    );
+    const text = screen.getByText("Phoenix: System design and development");
 
     expect(text).toBeDefined();
   });
