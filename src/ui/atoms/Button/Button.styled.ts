@@ -5,9 +5,9 @@ interface LabelProps {
 }
 
 export const ButtonContainer = styled.button`
-  background-color: ${(props) => props.theme.colors.primary};
+  background-color: ${({theme}) => theme.colors.primary};
   border: 0;
-  border-radius: 0.25rem;
+  border-radius: ${({theme}) => theme.size[0.5]};
   cursor: pointer;
   display: inline-block;
   padding: 0.5rem 1rem;
@@ -15,12 +15,12 @@ export const ButtonContainer = styled.button`
   width: 100%;
 
   &:hover {
-    background-color: ${(props) => props.theme.colors.primary};
+    background-color: ${({theme}) => theme.colors.primary};
   }
 `;
 
 export const Label = styled.span<LabelProps>`
-  color: ${(props) => (props.textColor !== null ? props.textColor : props.theme.colors.gray400)};
+  color: ${({textColor, theme}) => (textColor !== null ? textColor : theme.colors.gray400)};
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;
