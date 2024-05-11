@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 interface LabelProps {
   textColor?: React.CSSProperties["color"];
@@ -15,12 +15,12 @@ export const ButtonContainer = styled.button`
   width: 100%;
 
   &:hover {
-    background-color: ${(props) => props.theme.colors.primaryDark};
+    background-color: ${(props) => props.theme.colors.primary};
   }
 `;
 
 export const Label = styled.span<LabelProps>`
-  color: ${(props) => (props.textColor !== null ? props.textColor : props.theme.colors.text)};
+  color: ${(props) => (props.textColor !== null ? props.textColor : props.theme.colors.gray400)};
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;

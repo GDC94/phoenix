@@ -65,7 +65,6 @@ export const QUERIES = {
 
 export const THEMING = {
   colors: {
-    /**primary: "hsl(210deg, 30%, 8%)",,*/
     primary: "#0e141b",
     primaryText: "rgb(97 123 255)",
     colorSuccess: "hsl(160deg, 100%, 40%)",
@@ -75,22 +74,10 @@ export const THEMING = {
     yellow: "hsl(50.35deg 100% 50%)",
     tomato: "hsl(0deg 100% 66.67%)",
     organge: "hsl(30.12deg 100% 50%)"
-  },
-
-  transitions: {
-    "0.3s": "all 0.3s cubic-bezier(.51,.92,.24,1.15);"
-  },
-  size: {
-    "0.5rem": "0.5rem",
-    "0.75rem": "0.75rem",
-    "1rem": "1rem",
-    "1.25rem": "1.25rem",
-    "1.5rem": "1.5rem"
-  },
-  fonts: {
-    Montserrat: "'Montserrat', sans-serif"
   }
 };
+
+export type TypeThemeColors = typeof THEMING.colors;
 
 export const theme = {
   ...THEMING,
