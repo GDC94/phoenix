@@ -6,7 +6,7 @@ const BRAEKPOINTS = {
   laptopMin: 1100
 };
 
-export const QUERIES: Record<string, string> = {
+export const QUERIES = {
   phoneAndSmaller: `(max-width: ${BRAEKPOINTS.phone / 16}rem)`,
   tabletAndSmaller: `(max-width: ${BRAEKPOINTS.tablet / 16}rem)`,
   laptopAndSmaller: `(max-width: ${BRAEKPOINTS.laptop / 16}rem)`,

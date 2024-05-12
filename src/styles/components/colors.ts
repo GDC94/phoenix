@@ -1,13 +1,16 @@
 export const COLORS = {
-  primary: "#0e141b",
-  primaryText: "rgb(97 123 255)",
-  colorSuccess: "hsl(160deg, 100%, 40%)",
-  gray300: "hsl(210deg, 10%, 40%)",
+  primary: "hsl(160deg, 100%, 40%)",
+  white: "hsl(225deg, 16%, 90%)",
   gray400: "hsl(210deg, 9%, 45%)",
-  gray500: "hsl(210deg, 8%, 50%)",
-  yellow: "hsl(50.35deg 100% 50%)",
+  pinkDark: "hsl(280.12deg 100% 66.27%)",
+  background: "hsl(210deg, 30%, 8%)",
+  yellow: "hsl(53deg, 100%, 50%)",
   tomato: "hsl(0deg 100% 66.67%)",
-  organge: "hsl(30.12deg 100% 50%)"
+  organge: "hsl(30.12deg 100% 50%)",
+  secondary: "hsl(230deg, 100%, 69%)",
+  warning: "hsl(30.12deg 100% 50%)",
+  success: "hsl(160deg, 100%, 40%)",
+  dark: "hsl(225deg 2.99% 4.84%)"
 };
 
 export type TypeThemeColors = typeof COLORS;

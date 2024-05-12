@@ -1,15 +1,28 @@
-export type VariantProps = "primary" | "outlined" | "contained";
+import {z} from "zod";
 
-export type SizeProps = "small" | "medium" | "large" | "xlarge";
+const VariantProps = z.enum(["contained", "outlined", "success"]);
 
-export type ColorProps = "primary" | "secondary" | "danger" | "warning" | "success" | "default";
+export type VariantProps = z.infer<typeof VariantProps>;
 
-export interface ButtonProps {
-  variant?: VariantProps;
-  size: SizeProps;
-  color: ColorProps;
-  children: React.ReactNode;
-  onClick?: () => void;
-  label?: string;
-  textColor?: string;
-}
+const ColorProps = z.enum(["primary", "default", "success", "warning", "danger", "secondary"]);
+
+export type ColorProps = z.infer<typeof ColorProps>;
+
+const TextColorProps = z.enum(["dark", "primary", "white", "success", "warning", "danger", "secondary"]);
+
+export type TextColorProps = z.infer<typeof TextColorProps>;
+
+const FontWeightProps = z.enum(["extraBold", "bold", "semiBold", "regular", "light"]);
+
+export type FontWeightProps = z.infer<typeof FontWeightProps>;
+
+const ButtonPropsSchema = z.object({
+  variant: z.optional(VariantProps),
+  color: ColorProps,
+  onClick: z.optional(z.function()),
+  label: z.optional(z.string()),
+  textColor: z.optional(TextColorProps),
+  weight: z.optional(FontWeightProps)
+});
+
+export type ButtonProps = z.infer<typeof ButtonPropsSchema>;

@@ -48,9 +48,7 @@ function App() {
       </div>
       <div>{networks[0]?.chain.name}</div>
       <div>
-        <Button size={"small"} color={"primary"}>
-          <p>Enviar</p>
-        </Button>
+        <Button weight="light" color={"success"} textColor={"dark"} label={"Enviar"} variant="success" />
       </div>
     </>
   );
