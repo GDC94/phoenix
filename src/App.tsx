@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 
 import "./App.css";
-import {Button} from "./ui/atoms/Button";
+import {Button} from "ui/atoms/Button";
 
 export interface NetworksResponse {
   header: number;
@@ -48,7 +48,7 @@ function App() {
       </div>
       <div>{networks[0]?.chain.name}</div>
       <div>
-        <Button weight="light" color={"success"} textColor={"dark"} label={"Enviar"} variant="success" />
+        <Button weight="extraBold" color={"success"} textColor={"dark"} label={"Enviar"} variant="success" />
       </div>
     </>
   );

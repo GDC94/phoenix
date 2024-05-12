@@ -11,6 +11,12 @@ export default defineConfig({
   define: {
     "process.env.NODE_ENV": JSON.stringify(env.NODE_ENV)
   },
+  resolve: {
+    alias: {
+      src: "/src",
+      utils: "@utils"
+    }
+  },
   plugins: [
     react(),
     dts({
@@ -19,7 +25,6 @@ export default defineConfig({
       exclude: ["src/**/__tests__/**"]
     })
   ],
-
   test: {
     globals: true,
     environment: "jsdom",
@@ -49,7 +54,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
-      name: "lvlup-components",
+      name: "phoenix",
       formats: ["es", "umd"]
     },
     rollupOptions: {

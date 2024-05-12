@@ -1,7 +1,9 @@
 export const WEIGHTS = {
-  normal: 500,
-  medium: 600,
-  bold: 800
+  extraBold: 800,
+  bold: 500,
+  semiBold: 400,
+  regular: 300,
+  light: 100
 };
 
 export type TypeThemeWeights = typeof WEIGHTS;

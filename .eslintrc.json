@@ -14,7 +14,7 @@
   ],
   "ignorePatterns": ["node_modules", "dist", "vite.config.ts", ".eslintrc.json", "test/*", "plopfile.js"],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["react-refresh", "import"],
+  "plugins": ["react-refresh", "import", "eslint-plugin-import", "@typescript-eslint"],
   "rules": {
     "react-refresh/only-export-components": [
       "warn",
@@ -69,7 +69,9 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        "paths": ["src"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".d.ts"],
+        "moduleDirectory": ["src/", "node_modules"]
       }
     }
   }
