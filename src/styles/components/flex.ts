@@ -1,4 +1,4 @@
-export const flexProperties = {
+export const FlexBasicConfig = {
   display: "flex",
   alignItems: "center",
   justifyContent: "center"

@@ -12,7 +12,7 @@ const meta: Meta<typeof Button> = {
   argTypes: {
     variant: {
       options: ["primary", "secondary", "success", "danger"],
-      description: "The variant of the button."
+      description: "Enviar"
     }
   }
 };
@@ -29,6 +29,16 @@ export const Primary: Story = {
     variant: "primary",
     label: "Primary Button",
     color: "primary",
+    textColor: "white",
+    weight: "extraBold"
+  }
+};
+
+export const Secondary: Story = {
+  args: {
+    variant: "success",
+    label: "Enviando",
+    color: "success",
     textColor: "white",
     weight: "extraBold"
   }
