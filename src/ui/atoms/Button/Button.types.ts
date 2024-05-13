@@ -1,6 +1,6 @@
 import {z} from "zod";
 
-const VariantProps = z.enum(["contained", "outlined", "success"]);
+const VariantProps = z.enum(["primary", "secondary", "success", "danger"]);
 
 export type VariantProps = z.infer<typeof VariantProps>;
 
@@ -10,7 +10,7 @@ export type ColorProps = z.infer<typeof ColorProps>;
 
 const TextColorProps = z.enum(["dark", "primary", "white", "success", "warning", "danger", "secondary"]);
 
-export type TextColorProps = z.infer<typeof TextColorProps>;
+export type TextColorProps = z.infer<typeof TextColorProps & React.CSSProperties["color"]>;
 
 const FontWeightProps = z.enum(["extraBold", "bold", "semiBold", "regular", "light"]);
 

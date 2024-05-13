@@ -1,5 +1,5 @@
-import {theme} from "styles";
-import {FontWeightProps} from "ui/atoms/Button/Button.types";
+import {theme} from "../styles";
+import {FontWeightProps} from "../ui/atoms/Button/Button.types";
 
 /**
  * @method getWeight

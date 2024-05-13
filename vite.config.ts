@@ -11,12 +11,6 @@ export default defineConfig({
   define: {
     "process.env.NODE_ENV": JSON.stringify(env.NODE_ENV)
   },
-  resolve: {
-    alias: {
-      src: "/src",
-      utils: "@utils"
-    }
-  },
   plugins: [
     react(),
     dts({

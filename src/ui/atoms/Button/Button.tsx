@@ -11,3 +11,5 @@ export const Button: React.FC<ButtonProps> = ({onClick, textColor, label, varian
     </Styled.ButtonContainer>
   );
 };
+
+export default Button;

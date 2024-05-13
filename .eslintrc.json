@@ -12,7 +12,15 @@
     "plugin:import/warnings",
     "plugin:storybook/recommended"
   ],
-  "ignorePatterns": ["node_modules", "dist", "vite.config.ts", ".eslintrc.json", "test/*", "plopfile.js"],
+  "ignorePatterns": [
+    "node_modules",
+    "dist",
+    "vite.config.ts",
+    ".eslintrc.json",
+    "test/*",
+    "plopfile.js",
+    "!.storybook"
+  ],
   "parser": "@typescript-eslint/parser",
   "plugins": ["react-refresh", "import", "eslint-plugin-import", "@typescript-eslint"],
   "rules": {

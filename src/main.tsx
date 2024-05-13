@@ -5,8 +5,8 @@ import {ThemeProvider} from "@emotion/react";
 import App from "./App.tsx";
 import "./index.css";
 import {getPublicKeys} from "./env.ts";
-import {theme} from "./styles/theme.ts";
 import GlobalStyles from "./styles/globalStyles.ts";
+import {theme} from "./styles/theme.ts";
 
 async function enableMocking() {
   if (getPublicKeys().publicKeys.NODE_ENV !== "development") {
