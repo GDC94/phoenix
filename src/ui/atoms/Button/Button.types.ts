@@ -10,7 +10,7 @@ export type ColorProps = z.infer<typeof ColorProps>;
 
 const TextColorProps = z.enum(["dark", "primary", "white", "success", "warning", "danger", "secondary"]);
 
-export type TextColorProps = z.infer<typeof TextColorProps & React.CSSProperties["color"]>;
+export type TextColorProps = z.infer<typeof TextColorProps>;
 
 const FontWeightProps = z.enum(["extraBold", "bold", "semiBold", "regular", "light"]);
 
@@ -18,10 +18,10 @@ export type FontWeightProps = z.infer<typeof FontWeightProps>;
 
 const ButtonPropsSchema = z.object({
   variant: z.optional(VariantProps),
-  color: ColorProps,
+  color: z.optional(ColorProps),
   onClick: z.optional(z.function()),
   label: z.optional(z.string()),
-  textColor: z.optional(TextColorProps),
+  textColor: TextColorProps,
   weight: z.optional(FontWeightProps)
 });
 

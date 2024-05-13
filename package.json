@@ -15,7 +15,8 @@
     "generate": "plop",
     "formatter": "npm run lint --fix",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test:mutation": "stryker run"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -39,6 +40,7 @@
     "@storybook/react": "^8.0.10",
     "@storybook/react-vite": "^8.0.10",
     "@storybook/test": "^8.0.10",
+    "@stryker-mutator/vitest-runner": "^8.2.6",
     "@testing-library/jest-dom": "^6.4.5",
     "@testing-library/react": "^15.0.6",
     "@testing-library/user-event": "^14.5.2",

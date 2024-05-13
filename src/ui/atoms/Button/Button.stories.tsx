@@ -1,5 +1,9 @@
 import type {Meta, StoryObj} from "@storybook/react";
 
+import {ThemeProvider} from "@emotion/react";
+
+import {theme} from "../../../styles";
+
 import Button from "./Button";
 
 const meta: Meta<typeof Button> = {
@@ -8,6 +12,13 @@ const meta: Meta<typeof Button> = {
   parameters: {
     layout: "centered"
   },
+  decorators: [
+    (Story) => (
+      <ThemeProvider theme={theme}>
+        <Story />
+      </ThemeProvider>
+    )
+  ],
   tags: ["autodocs"],
   argTypes: {
     variant: {
@@ -29,7 +40,7 @@ export const Primary: Story = {
     variant: "primary",
     label: "Primary Button",
     color: "primary",
-    textColor: "white",
+    textColor: "dark",
     weight: "extraBold"
   }
 };
@@ -38,8 +49,8 @@ export const Secondary: Story = {
   args: {
     variant: "success",
     label: "Enviando",
-    color: "success",
-    textColor: "white",
+    color: "secondary",
+    textColor: "dark",
     weight: "extraBold"
   }
 };
