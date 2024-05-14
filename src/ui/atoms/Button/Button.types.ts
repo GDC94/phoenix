@@ -1,6 +1,6 @@
 import {z} from "zod";
 
-const VariantProps = z.enum(["primary", "secondary", "success", "danger"]);
+const VariantProps = z.enum(["solid", "faded", "bordered", "light", "flat", "ghost"]);
 
 export type VariantProps = z.infer<typeof VariantProps>;
 
@@ -21,7 +21,7 @@ const ButtonPropsSchema = z.object({
   color: z.optional(ColorProps),
   onClick: z.optional(z.function()),
   label: z.optional(z.string()),
-  textColor: TextColorProps,
+  textColor: z.optional(TextColorProps),
   weight: z.optional(FontWeightProps)
 });
 

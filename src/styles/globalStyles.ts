@@ -1,6 +1,8 @@
 import {createGlobalStyle} from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 *,
 *::before,
 *::after {
@@ -12,7 +14,7 @@ const GlobalStyles = createGlobalStyle`
 }
 html {
   --body-bgcolor: hsl(265deg 10% 7.84%);
-  --inter: "Inter", sans-serif;
+  --inter: "Roboto", sans-serif;
   scrollbar-gutter: stable;
   overscroll-behavior-y: none;
 }

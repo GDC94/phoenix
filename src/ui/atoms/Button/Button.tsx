@@ -4,10 +4,12 @@ import * as React from "react";
 
 import * as Styled from "./Button.styled";
 
-export const Button: React.FC<ButtonProps> = ({onClick, textColor, label, variant, color, ...rest}) => {
+export const Button: React.FC<ButtonProps> = ({onClick, textColor, label, variant, color, weight, ...rest}) => {
   return (
     <Styled.ButtonContainer onClick={onClick} variant={variant} color={color} {...rest}>
-      <Styled.Label textColor={textColor}>{label}</Styled.Label>
+      <Styled.Label weight={weight} textColor={textColor}>
+        {label}
+      </Styled.Label>
     </Styled.ButtonContainer>
   );
 };

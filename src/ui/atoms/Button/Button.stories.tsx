@@ -37,20 +37,20 @@ type Story = StoryObj<typeof meta>;
 // How the Button component is used in the application
 export const Primary: Story = {
   args: {
-    variant: "primary",
+    variant: "ghost",
     label: "Primary Button",
     color: "primary",
-    textColor: "dark",
+    textColor: "white",
     weight: "extraBold"
   }
 };
 
 export const Secondary: Story = {
   args: {
-    variant: "success",
+    variant: "solid",
     label: "Enviando",
-    color: "secondary",
-    textColor: "dark",
+    color: "danger",
+    textColor: "white",
     weight: "extraBold"
   }
 };
