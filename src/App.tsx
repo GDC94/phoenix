@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 
 import "./App.css";
 import {Button} from "./ui/atoms/Button";
+import Checkbox from "./ui/atoms/checkbox/checkbox";
 
 export interface NetworksResponse {
   header: number;
@@ -49,6 +50,9 @@ function App() {
       <div>{networks[0]?.chain.name}</div>
       <div>
         <Button weight="bold" label={"Enviar"} variant="solid" textColor="white" />
+      </div>
+      <div>
+        <Checkbox />
       </div>
     </>
   );
