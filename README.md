@@ -39,6 +39,5 @@ MSW
 -npm i -D msw
 -npx msw init .\public\ --> yes
 
-
-RADIX PRIMITIVES 
+RADIX PRIMITIVES
 https://github.com/radix-ui/primitives
