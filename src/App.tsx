@@ -48,7 +48,7 @@ function App() {
       </div>
       <div>{networks[0]?.chain.name}</div>
       <div>
-        <Button weight="bold" label={"Enviar"} variant="solid" textColor="white" />
+        <Button weight="semiBold" label={"Enviar"} variant="solid" textColor="white" />
       </div>
     </>
   );
