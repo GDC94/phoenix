@@ -1,21 +1,19 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type {Meta, StoryObj} from "@storybook/react";
 
-import { toast } from './'
+import {toast} from "./";
 
 const meta: Meta<typeof toast> = {
-  title: 'Atoms/toast',
+  title: "Atoms/toast",
   component: toast,
   parameters: {
-    layout: 'centered'
+    layout: "centered"
   },
-  tags: ['autodocs'],
-  argTypes: {
+  tags: ["autodocs"],
+  argTypes: {}
+};
 
-  }
-}
+export default meta;
 
-export default meta
+type Story = StoryObj<typeof meta>;
 
-type Story = StoryObj<typeof meta>
-
-export const Playground: Story = {}
+export const Playground: Story = {};
