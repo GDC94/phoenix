@@ -1,5 +1,5 @@
+/*
 import * as React from "react";
-import * as Styled from "./toast.styled";
 
 const ToastDemo = () => {
   const [open, setOpen] = React.useState<boolean>(false);
@@ -52,3 +52,4 @@ function prettyDate(date: Date) {
 }
 
 export default ToastDemo;
+*/
