@@ -1,5 +1,5 @@
 import {theme} from "../styles";
-import {TextColorProps, VariantProps} from "../ui/atoms/Button/Button.types";
+import {VariantProps} from "../ui/atoms/Button/Button.types";
 
 /**
  * @method getVariant
@@ -8,7 +8,7 @@ import {TextColorProps, VariantProps} from "../ui/atoms/Button/Button.types";
  * @returns The color value associated with the provided variant or text color option.
  */
 
-const getVariant = (variant: VariantProps | TextColorProps): string => {
+const getVariant = (variant: VariantProps): string => {
   const variantColors: Record<string, string> = {
     solid: theme.colors.blue[300],
     faded: theme.colors.gray[300],

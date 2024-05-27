@@ -13,7 +13,8 @@ const GlobalStyles = createGlobalStyle`
   padding: 0;
 }
 html {
-  --body-bgcolor: hsl(265deg 10% 7.84%);
+  --body-bgcolor: hsl(255deg 30% 7.84%);
+  --body-bgcolor: #000000;
   --inter: "Roboto", sans-serif;
   scrollbar-gutter: stable;
   overscroll-behavior-y: none;

@@ -1,28 +1,33 @@
+import {ButtonHTMLAttributes} from "react";
 import {z} from "zod";
 
 const VariantProps = z.enum(["solid", "faded", "bordered", "light", "flat", "ghost"]);
 
 export type VariantProps = z.infer<typeof VariantProps>;
 
-const ColorProps = z.enum(["primary", "default", "success", "warning", "danger", "secondary"]);
+const ColorProps = z.enum(["red", "blue", "green", "yellow", "purple"]);
 
 export type ColorProps = z.infer<typeof ColorProps>;
-
-const TextColorProps = z.enum(["dark", "primary", "white", "success", "warning", "danger", "secondary"]);
-
-export type TextColorProps = z.infer<typeof TextColorProps>;
 
 const FontWeightProps = z.enum(["extraBold", "bold", "semiBold", "regular", "light"]);
 
 export type FontWeightProps = z.infer<typeof FontWeightProps>;
 
+export const VARIANTS = {
+  SOLID: "solid",
+  FADED: "faded",
+  BORDERED: "bordered",
+  LIGHT: "light",
+  FLAT: "flat",
+  GHOST: "ghost"
+};
 const ButtonPropsSchema = z.object({
   variant: z.optional(VariantProps),
-  color: z.optional(ColorProps),
+  color: ColorProps,
   onClick: z.optional(z.function()),
   label: z.optional(z.string()),
-  textColor: z.optional(TextColorProps),
-  weight: z.optional(FontWeightProps)
+  weight: z.optional(FontWeightProps),
+  disabled: z.optional(z.boolean())
 });
 
-export type ButtonProps = z.infer<typeof ButtonPropsSchema>;
+export type ButtonProps = z.infer<typeof ButtonPropsSchema> & ButtonHTMLAttributes<HTMLButtonElement>;
