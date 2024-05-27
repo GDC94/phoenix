@@ -1,22 +1,29 @@
-/*
-import { screen } from '@testing-library/react'
-import { beforeEach, describe, expect, it } from 'vitest'
+import type {ButtonProps} from "./Button.types";
 
-import { Button } from './Button'
-import type { ButtonProps } from './Button.types'
+import {beforeEach, describe, it} from "vitest";
 
-describe('Button', () => {
-    let defaultProps: ButtonProps
+import {render, screen} from "../../../test/customRender";
 
-    beforeEach(() => {
-        defaultProps = {
+import Button from "./Button";
 
-        }
-    })
+describe("Button", () => {
+  let defaultProps: ButtonProps;
 
-    it('Should ...', () => {
-        
-    })
-})
+  beforeEach(() => {
+    defaultProps = {
+      variant: "solid",
+      label: "Solid Tested label",
+      color: "blue",
+      weight: "bold",
+      onClick: () => {},
+      disabled: false
+    };
+  });
 
-*/
+  it("[TEST] Should render a SOLID variant button with the Button 'Solid Tested label'", () => {
+    render(<Button {...defaultProps} />);
+    const solidBTN = screen.getByRole("button", {name: "Solid Tested label"});
+
+    expect(solidBTN).toBeInTheDocument();
+  });
+});

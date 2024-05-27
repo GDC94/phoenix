@@ -22,8 +22,14 @@ const meta: Meta<typeof Button> = {
   tags: ["autodocs"],
   argTypes: {
     variant: {
-      options: ["primary", "secondary", "success", "danger"],
+      options: ["ghost", "solid"],
       description: "Enviar"
+    },
+    color: {
+      options: ["blue", "green", "red", "purple"]
+    },
+    onClick: {
+      action: "Button clicked"
     }
   }
 };
@@ -35,22 +41,47 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // How the Button component is used in the application
-export const Primary: Story = {
+export const Ghost: Story = {
   args: {
     variant: "ghost",
-    label: "Primary Button",
-    color: "primary",
-    textColor: "white",
-    weight: "extraBold"
+    label: "Ghost",
+    color: "blue",
+    weight: "bold"
   }
 };
 
-export const Secondary: Story = {
+export const Solid: Story = {
   args: {
     variant: "solid",
-    label: "Enviando",
-    color: "danger",
-    textColor: "white",
-    weight: "extraBold"
+    label: "Solid",
+    color: "green",
+    weight: "bold"
+  }
+};
+
+export const Light: Story = {
+  args: {
+    variant: "light",
+    label: "Light",
+    color: "purple",
+    weight: "bold"
+  }
+};
+
+export const Flat: Story = {
+  args: {
+    variant: "flat",
+    label: "Flat",
+    color: "red",
+    weight: "bold"
+  }
+};
+
+export const Faded: Story = {
+  args: {
+    variant: "faded",
+    label: "Faded",
+    color: "yellow",
+    weight: "bold"
   }
 };

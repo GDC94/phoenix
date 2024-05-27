@@ -28,10 +28,10 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
   ${({variant, theme, color}) =>
     variant === VARIANTS.SOLID &&
     css`
-      background-color: ${theme.colors[color][300]};
-      border-color: ${theme.colors[color][300]};
+      background-color: ${theme.colors?.[color]?.[300]};
+      border-color: ${theme.colors?.[color]?.[300]};
       &:hover {
-        background-color: ${theme.colors[color][400]};
+        background-color: ${theme.colors?.[color]?.[400]};
         border-color: ${theme.colors[color][400]};
       }
     `}
@@ -40,8 +40,8 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
     variant === VARIANTS.FADED &&
     css`
       background-color: ${theme.colors.black[100]};
-      border-color: ${theme.colors[color][300]};
-      color: ${theme.colors[color][300]};
+      border-color: ${theme.colors?.[color]?.[300]};
+      color: ${theme.colors?.[color]?.[300]};
       &:hover {
         background-color: ${theme.colors[color][700]};
       }
@@ -51,11 +51,11 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
     variant === VARIANTS.GHOST &&
     css`
       background-color: transparent;
-      border-color: ${theme.colors[color][300]};
-      color: ${theme.colors[color][300]};
+      border-color: ${theme.colors?.[color]?.[300]};
+      color: ${theme.colors?.[color]?.[300]};
 
       &:hover {
-        background-color: ${theme.colors[color][300]};
+        background-color: ${theme.colors?.[color]?.[300]};
         color: ${theme.colors.white[100]};
       }
     `}
@@ -63,13 +63,13 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
   ${({variant, theme, color}) =>
     variant === VARIANTS.FLAT &&
     css`
-      background-color: ${theme.colors[color][700]};
-      color: ${theme.colors[color][200]};
+      background-color: ${theme.colors?.[color]?.[700]};
+      color: ${theme.colors?.[color]?.[200]};
       border-color: transparent;
 
       &:hover {
-        background-color: ${theme.colors[color][800]};
-        color: ${theme.colors[color][300]};
+        background-color: ${theme.colors?.[color]?.[800]};
+        color: ${theme.colors?.[color]?.[300]};
       }
     `}
 
@@ -77,10 +77,10 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
     variant === VARIANTS.LIGHT &&
     css`
       background-color: transparent;
-      color: ${theme.colors[color][300]};
+      color: ${theme.colors?.[color]?.[300]};
       border-color: transparent;
       &:hover {
-        background-color: ${theme.colors[color][700]};
+        background-color: ${theme.colors?.[color]?.[700]};
       }
     `}
   
