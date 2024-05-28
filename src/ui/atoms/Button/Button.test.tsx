@@ -2,7 +2,7 @@ import type {ButtonProps} from "./Button.types";
 
 import {beforeEach, describe, it} from "vitest";
 
-import {render, screen} from "../../../test/customRender";
+import {render, screen} from "../../../utils/test-utils";
 
 import Button from "./Button";
 
