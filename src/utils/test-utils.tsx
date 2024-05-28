@@ -3,15 +3,14 @@
 /* eslint-disable react-refresh/only-export-components */
 import {afterEach, vi} from "vitest";
 import {cleanup, render} from "@testing-library/react";
+import {ThemeProvider} from "@emotion/react";
+
+import {theme} from "../styles";
 
 afterEach(() => {
   cleanup();
   vi.clearAllMocks();
 });
-import {ThemeProvider} from "@emotion/react";
-
-import {theme} from "../styles";
-
 const AllTheProviders = ({children}: {children: React.ReactNode}) => {
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 };
